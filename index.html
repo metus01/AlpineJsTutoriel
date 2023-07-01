@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
+    <script  defer src="js/script.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 <style>
@@ -61,7 +62,8 @@
             <p x-show="!showSpoiler"><button class="btn btn-primary"  x-on:click="showSpoiler=true">Afficher le Spoiler</button></p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium assumenda laboriosam tempore consequatur eveniet architecto dolorem nam officiis voluptas exercitationem enim nisi nostrum, voluptatum eligendi necessitatibus voluptatibus voluptatem illo? Nihil?</p>
           </div>
-          <div class="container my-5">
+          <div class="container my-5" x-data="tabs('tab1')">
+            <p x-text="tabs"></p>
             <ul class="nav nav-pills">
                 <li class="nav-item">
                     <a class="nav-link" href="#tab1">Onglet1</a>
@@ -82,7 +84,6 @@
             </div>
           </div>
     </main>
-    <script src="js/script.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
