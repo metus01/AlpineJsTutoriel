@@ -52,14 +52,36 @@
               </div>
             </div>
           </nav>
-          <div class="container my-5" x-data="{showSpoiler:false}">
+    </header>
+    <main>
+        <div class="container my-5" x-data="{showSpoiler:false}">
             <h1>Mon avis sur le film</h1>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores, ut nam laudantium expedita minima odio tenetur esse consequuntur qui quidem, sint voluptatum consectetur autem fugiat, ea quo velit veniam. Voluptatum.</p>
-            <p x-show="showSpoiler" x-cloak="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non corrupti sint, minima ipsa eveniet cupiditate deserunt numquam. Inventore, ratione, ipsam necessitatibus eaque tenetur possimus sed maxime quisquam cupiditate provident error.</p>
+            <p x-show="showSpoiler" x-cloak="" x-transition.opacity>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non corrupti sint, minima ipsa eveniet cupiditate deserunt numquam. Inventore, ratione, ipsam necessitatibus eaque tenetur possimus sed maxime quisquam cupiditate provident error.</p>
             <p x-show="!showSpoiler"><button class="btn btn-primary"  x-on:click="showSpoiler=true">Afficher le Spoiler</button></p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium assumenda laboriosam tempore consequatur eveniet architecto dolorem nam officiis voluptas exercitationem enim nisi nostrum, voluptatum eligendi necessitatibus voluptatibus voluptatem illo? Nihil?</p>
           </div>
-    </header>
+          <div class="container my-5">
+            <ul class="nav nav-pills">
+                <li class="nav-item">
+                    <a class="nav-link" href="#tab1">Onglet1</a>
+                </li>
+                <li class="nav-item">
+                    <a  class="nav-link" href="#tab2">Onglet2</a>
+                </li>
+            </ul>
+            <div class="mt-2">
+                <template>
+                    <h1>Onglet1</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum quos non distinctio? Vitae in voluptate hic enim commodi veritatis modi cupiditate magni aperiam amet. Quidem doloribus quo nemo voluptatibus eaque!</p>
+                </template>
+                <template>
+                    <h1>Onglet2</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt accusantium, libero id asperiores ratione illum eius necessitatibus, quibusdam impedit commodi optio, aliquam repudiandae quia maiores dignissimos consequatur dolorem. Expedita, ipsum?</p>
+                </template>
+            </div>
+          </div>
+    </main>
     <script src="js/script.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
 </body>
